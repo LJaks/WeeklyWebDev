@@ -1,0 +1,32 @@
+html, body {
+    margin:20px;
+    padding: 0;
+    font-family: Karla;
+}
+
+#box {
+    padding: 10px;
+    display: block;
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    background: #ECF2FF;
+    font-size: 30px;
+}
+
+#emoji-container {
+    font-size: 50px;
+}
+
+#box:focus {
+    background: #CFDFFF;
+}
+
+#help-text {
+    display: none;
+    text-align: center;
+}
+
+#box:focus #help-text {
+    display: block;
+}

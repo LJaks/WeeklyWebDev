@@ -1,0 +1,48 @@
+html, body {
+    padding: 0;
+    font-family: Karla;
+    background: #ECF2FF;
+}
+
+#main-container {
+    /* 
+        Vertically Stack 
+        & Horizontally Center contents
+    */
+}
+
+#equation-field {
+    text-align: center;
+    font-size: 2rem;
+    background-color: wheat;
+    outline: none;
+    margin: 0.5rem;
+    border-radius: 0.3rem;
+    width: 10rem;
+}
+
+#solve-button {
+    border: none;
+    background-color: #4CAF50;
+    font-size: 2rem;
+    color: white;
+    padding: 0.3rem 1rem;
+    text-align: center;
+    cursor: pointer;
+    display: inline-block;
+    margin: 0.5rem;
+    width: 10rem;
+    outline: none;
+}
+
+
+#solution-display {
+    display: flex;
+}
+
+#solution-display > .equation-component {
+    background-color: #008CBA;
+    color: white;
+    font-size: 2rem;
+    padding: 0.1rem 1rem;
+}

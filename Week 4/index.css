@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --ff: "Reenie Beanie", cursive;
+  --fs-first: 40px;
+  --fs-second: 30px;
+  --fs-third: 20px;
+  --back-c: #fff2e6;
+  --card-c: #ffcc99;
+  --font-c: #331a00;
+  --gift-c: #ff8000;
+}
+html,
+body {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-family: var(--ff);
+  background: var(--back-c);
+}
+
+/*
+DESCRIPTION:
+
+You challenge is to create a responsive flip card. 
+The user should be able to hover or click on the card 
+and it needs to flip on the other side to reveal what's on the back. 
+
+Remember: the card needs to be responsive - as I change the size of my window, 
+the card needs to adjust to the new size and look natural. 
+
+transform-style, transform, transition, 
+perspective, pseudo-classes, cursor, 
+min- max- prefixes, ems and rems, 
+*/
+
+/* Write your code here 👇 */
+
+.container {
+  position: relative;
+  display: flex;
+  background-color: transparent;
+  width: 400px;
+  height: 300px;
+  perspective: 1000px;
+}
+.card {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background: var(--card-c);
+  color: var(--font-c);
+}
+.container:hover .card {
+  transform: rotateY(180deg);
+}
+.front .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.back {
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  padding: 10px;
+}
+
+.back h1 {
+  font-size: var(--fs-second);
+}
+.back ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.back li {
+  margin-bottom: 10px;
+  font-size: var(--fs-third);
+  font-weight: 600;
+}
+.front {
+  backface-visibility: hidden;
+}
+.front h1 {
+  font-size: var(--fs-first);
+}
+
+.fa-gift {
+  font-size: 40px;
+  color: var(--gift-c);
+}
+
+/*
+
+DETAILED INSTRUCTIONS
+1. Choose the required pseudo-class
+2. Figure out how to flip a card on the required event
+3. Make it responsive!
+
+*/
+/* 
+
+Hint 1:
+There is :hover pseudo-class that applies styles when the mouse is hovered over it. 
+
+Like this:
+.card:hover {
+     background: #fafafa
+}
+
+Hint 2:
+Found transform css property, but only the back of the card is shown? 
+This is because .back element is rendered after .front, so it gets covered,
+use "backface-visibility: hidden;" to hide the back of the card.
+
+Hint 3: 
+You got the card flipped, but the wording is mirrored? Try researching 
+"transform-style" property
+
+*/

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Laura Jakseboge" />
+    <meta name="description" content="Card" />
+    <meta
+      name="keywords"
+      content="Laura Jakseboge, Laura, Jakseboge, ljaks, card"
+    />
+
+    <title>Happy B-day!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="container"
+        onmouseover="play()"
+        onmouseout="stopPlay()"
+    >
+      <div class="card">
+        <div class="front">
+          <h1>Happy birthday!</h1>
+        </div>
+        <div class="back">
+          <h1>2 things to remember on your birthday:</h1>
+          <ul class="text">
+            <li>No 1. Forget the past, you can't change it</li>
+            <li>No 2. Forget the present, I didn't get you one</li>
+          </ul>
+            <i class="fa fa-gift" ></i>
+        </div>
+      </div>
+    </div>
+    <audio id="audioID" src="./sound/party-blower.wav"></audio>
+    <script src="index.js"></script>
+  </body>
+</html>

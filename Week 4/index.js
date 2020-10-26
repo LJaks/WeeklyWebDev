@@ -13,12 +13,12 @@ a video reveal or a music album cover with a song player at the back.
     - a video reveal/song card: start playing the video/song
 
 */
-function play() {
-    var audio = document.getElementById("audioID");
+function Play(soundobj) {
+    var audio = document.getElementById(soundobj);
     audio.play();
   }
-  function stopPlay() {
-      var audio = document.getElementById("audioID");
+  function StopPlay(soundobj) {
+      var audio = document.getElementById(soundobj);
       audio.pause();
       audio.currentTime = 0;
   }

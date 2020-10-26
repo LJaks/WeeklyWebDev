@@ -107,9 +107,17 @@ min- max- prefixes, ems and rems,
   font-size: var(--fs-first);
 }
 
-.fa-gift {
+.fa {
   font-size: 40px;
   color: var(--gift-c);
+  cursor: pointer;
+  margin: 0 auto;
+  width: 40px;
+  transition: 0.5s all ease;
+}
+.fa:hover {
+  color: #ff5100;
+  transform: scale(1.5);
 }
 
 /*

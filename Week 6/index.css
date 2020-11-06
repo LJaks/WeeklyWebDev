@@ -1,0 +1,139 @@
+/*
+DESCRIPTION:
+Your job is to style the the individual items so that they look like content cards,
+just like what we have in the slides. Each item has a title and a description.
+
+You should use CSS grid for the layout:
+
+- On mobile phones, one column per row
+- On tablet, two columns per row
+- On desktop, three columns per row
+
+Use media queries to make the page responsive.
+For the page width:
+
+- From 0 to 480px should be for mobile
+- Between 480px and 1025px should be for tablets
+- Above 1025px should be for desktop
+
+Feel free to choose your own colors and you can even go ahead to make your cards
+look completely different. Just follow the layout!
+*/
+:root {
+  --clr-heading: rgb(17, 102, 17);
+  --fh1-size: 2rem;
+  --fh2-size: 1.5rem;
+
+  --ft1-size: 1.2rem;
+  --ft2-size: 1rem;
+
+  --fd1-size: 1rem;
+  --fd2-size: 0.8rem;
+
+  --clr-item: rgb(50, 153, 50);
+
+  --shadow: 5px 5px 0 rgba(0, 0, 0, 0.5);
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  font-family: "Source Sans Pro", sans-serif;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: center;
+  align-content: center;
+  margin: 0 auto;
+}
+.heading {
+  display: inline-block;
+  text-align: center;
+  line-height: var(--fh1-size);
+  font-size: var(--fh1-size);
+  margin: 20px auto;
+  color: var(--clr-heading);
+}
+.row {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  padding: 10px 30px;
+}
+.item {
+  display: flex;
+  position: relative;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  flex-direction: column;
+  justify-items: center;
+  text-align: center;
+  border-radius: 2px;
+  background-color: var(--clr-item);
+  color: white;
+  box-shadow: var(--shadow);
+  padding: 10px;
+  margin: 0;
+}
+.title,
+.description {
+  margin: 10px auto;
+}
+
+@media screen and (max-width: 510px) {
+  .title,
+  .description,
+  .heading {
+    font-size: 60%;
+    margin: 2px auto;
+    line-height: 0.7rem;
+  }
+  .heading {
+    margin: 10px auto;
+  }
+}
+
+@media screen and (min-width: 510px) {
+  .row {
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+    grid-gap: 20px;
+  }
+  .heading {
+    font-size: var(--fh2-size);
+  }
+  .title {
+    font-size: var(--ft2-size);
+  }
+  .description {
+    font-size: var(--fd2-size);
+  }
+  .title,
+  .description,
+  .heading {
+    line-height: 1.3rem;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .row {
+    grid-template-columns: repeat(3, minmax(320px, 1fr));
+    grid-gap: 25px;
+  }
+  .heading {
+    font-size: var(--fh1-size);
+  }
+  .title {
+    font-size: var(--ft1-size);
+  }
+  .description {
+    font-size: var(--fd1-size);
+  }
+  .title,
+  .description,
+  .heading {
+    line-height: 1.8rem;
+  }
+}

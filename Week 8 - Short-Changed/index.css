@@ -1,0 +1,85 @@
+html, body {
+    background-color: royalblue
+}
+
+#coins {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+}
+
+.coin {
+    border: 0.1rem solid black;
+    display: flex;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+}
+
+.quarter, .dime, .nickel {
+    background: lightgray;
+}
+
+.nickel {
+    height: 2.3rem;
+    width: 2.3rem;
+}
+
+.dime {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.penny {
+    background: orange;
+    height: 1.9rem;
+    width: 1.9rem;
+}
+
+#coin-counts {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#coin-counts > div {
+    text-align: center;
+    border: 0.2rem solid black;
+    font-size: 2rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+#coin-counts > div:before {
+    content: "x";
+}
+
+#purchase-confirmation {
+    font-size: 1.5rem;
+    text-align: center;
+    border: 0.1rem solid black;
+    margin: 1rem;
+    border-radius: 1.5rem;
+    padding: 1rem;
+    color: white;
+}
+
+#case-switcher {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#case-switcher > button {
+    border: none;
+    padding: 1rem 0.8rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.2rem;
+}

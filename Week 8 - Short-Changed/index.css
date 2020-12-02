@@ -53,6 +53,7 @@ html, body {
     font-size: 2rem;
     padding: 0.5rem;
     border-radius: 0.5rem;
+    background-color: greenyellow;
 }
 
 #coin-counts > div:before {
@@ -67,6 +68,12 @@ html, body {
     border-radius: 1.5rem;
     padding: 1rem;
     color: white;
+}
+.true {
+    background-color: green;
+}
+.false {
+    background-color: red;
 }
 
 #case-switcher {

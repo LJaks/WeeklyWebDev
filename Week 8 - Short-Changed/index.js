@@ -34,4 +34,40 @@ const pennyCounter = document.getElementById("penny-count");
 let sampleTest = testPurses[0];
 console.log(sampleTest);
 
+let array = Object.values(sampleTest);
+
+let sum = 0;
+for (let i = 0; i < array.length - 1; i++) {
+  sum += array[i] * document.querySelectorAll(".coin")[i].innerHTML;
+}
+sum = sum.toFixed(2);
+
+if (sum >= sampleTest.price) {
+  purchaseConfirmation.innerText =
+    "You have $" +
+    sum +
+    ". You can buy it for the price of $" +
+    sampleTest.price;
+  purchaseConfirmation.classList.add("true");
+} else {
+  purchaseConfirmation.innerText =
+    "You have $" +
+    sum +
+    ". Not enough coins for the price of $" +
+    sampleTest.price;
+  purchaseConfirmation.classList.add("false");
+}
+
+quarterCounter.innerText = sampleTest.quarters;
+dimeCounter.innerText = sampleTest.dimes;
+nickelCounter.innerText = sampleTest.nickels;
+pennyCounter.innerText = sampleTest.pennies;
+
 // Your code here 👇
+
+const nextbtn = document
+  .getElementById("next-case")
+  .addEventListener("click", function () {});
+const prevbtn = document
+  .getElementById("previous-case")
+  .addEventListener("click", function () {});

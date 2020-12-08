@@ -1,0 +1,72 @@
+body {
+  background-color: #aeb8fe;
+  display: flex;
+}
+
+.dice {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  border-radius: 10px;
+  background-color: #efe5dc;
+  margin: 100px;
+}
+
+.dot {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 15px;
+  background-color: black;
+  margin: 35px;
+}
+
+.dice1 .dot,
+.dice3 .dot:nth-child(2),
+.dice5 .dot:nth-child(3) {
+  margin: 0;
+  top: calc(50% - 10px);
+  left: calc(50% - 10px);
+}
+.dice2 .dot:first-child,
+.dice3 .dot:first-child,
+.dice4 .dot:first-child,
+.dice5 .dot:first-child,
+.dice6 .dot:first-child {
+  margin: 0;
+  top: 10px;
+  left: 10px;
+}
+.dice2 .dot:last-child,
+.dice3 .dot:last-child,
+.dice4 .dot:last-child,
+.dice5 .dot:last-child,
+.dice6 .dot:last-child {
+  margin: 0;
+  bottom: 10px;
+  right: 10px;
+}
+.dice4 .dot:nth-child(2),
+.dice5 .dot:nth-child(2),
+.dice6 .dot:nth-child(2) {
+  margin: 0;
+  top: 10px;
+  right: 10px;
+}
+.dice4 .dot:nth-child(3),
+.dice5 .dot:nth-child(4),
+.dice6 .dot:nth-child(4) {
+  margin: 0;
+  bottom: 10px;
+  left: 10px;
+}
+.dice6 .dot:nth-child(3) {
+  margin: 0;
+  top: calc(50% - 10px);
+  left: 10px;
+}
+.dice6 .dot:nth-child(5) {
+  margin: 0;
+  top: calc(50% - 10px);
+  right: 10px;
+}

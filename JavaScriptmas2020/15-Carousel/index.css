@@ -1,0 +1,59 @@
+/*
+Thanks to these fine individuals from Unsplash:
+https://unsplash.com/photos/AmzKuEnr1VY
+https://unsplash.com/photos/eDnJQL21amc
+https://unsplash.com/photos/LXy2DOOxESQ
+https://unsplash.com/photos/KBKHXjhVQVM
+https://unsplash.com/photos/PxM8aeJbzvk
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: 'Playfair Display';
+    display: grid;
+    justify-content: center;
+}
+
+img {
+    width: 200px;
+}
+
+.previous, .next {
+    width: 35px;
+}
+.previous {
+    opacity: .3;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 20% 200px 20%;
+    place-content: center;
+}
+
+.gallery-wrapper {
+    overflow: hidden;
+    width: 100%;
+}
+.previous, .next {
+    justify-self: center;
+    align-self: center;
+    cursor: pointer;
+}
+
+.gallery {
+    transform-style: preserve-3d;
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    transform: translateX(0);
+    transition: 0.4s ease-in-out;
+}
+
+.card {
+    margin-right: 20px;
+    align-self: center;
+}

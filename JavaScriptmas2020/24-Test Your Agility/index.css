@@ -1,0 +1,106 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: greenyellow;
+  font-family: monospace;
+}
+
+.title {
+  text-align: center;
+}
+
+.target {
+  display: flex;
+  justify-content: center;
+}
+
+#result {
+  color: blue;
+  text-align: center;
+  font-size: 15px;
+}
+
+.wheel-spin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  margin: 20px auto;
+}
+.wheel {
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+.wheel::after {
+  position: relative;
+  content: "";
+  display: block;
+  border: 100px solid black;
+  right: 0.5px;
+  width: 0;
+  height: 0;
+  top: calc(-50% + 30px);
+  border-left-color: transparent;
+  border-right-color: rgba(31, 213, 55, 1);
+  border-top-color: rgba(228, 0, 16, 1);
+  border-bottom-color: grey;
+  border-radius: 50%;
+  animation: 0.8s infinite linear spins;
+}
+.wheel.stop::after {
+  animation-play-state: paused;
+}
+.clicker {
+  position: relative;
+  cursor: pointer;
+  width: 70px;
+  height: 70px;
+  background-color: blanchedalmond;
+  border-radius: 50%;
+  top: calc(50% - 35px);
+  left: calc(50% - 35px);
+  z-index: 1;
+}
+.clicker::before {
+  content: "";
+  position: relative;
+  display: block;
+  top: -30px;
+  left: 15px;
+  border: 20px solid black;
+  border-radius: 50%;
+  border-color: transparent transparent blanchedalmond transparent;
+  width: 0;
+  height: 0;
+}
+.clicker::after {
+  content: "STOP";
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -15px;
+  color: red;
+}
+.clicker:hover {
+  transform: scale(1.2);
+}
+#spinning {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: -15px;
+  margin: auto;
+}
+
+@keyframes spins {
+  0% {
+    transform: rotate(360deg);
+  }
+}
